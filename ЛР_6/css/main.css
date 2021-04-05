@@ -1,0 +1,98 @@
+*{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sky{
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(0, 100, 255, 0.5);
+}
+
+.night{
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  transition: opacity;
+  animation: change_day 15s linear infinite alternate;
+  animation-direction: alternate;
+}
+
+.fish{
+  max-width: 20vh;
+  max-height: 20vh;
+  width: 20%;
+  position: absolute;
+  animation: fish_swim 10s linear infinite;
+}
+
+@keyframes fish_swim {
+  from{
+    margin-left: 110%;
+  }
+  to{
+    margin-left: -20%;
+  }
+}
+
+@keyframes change_day {
+  from{
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.grass{
+  width: 100%;
+  height: 50vh;
+  margin-top: 50vh;
+  animation: grass_night 15s linear infinite alternate;
+
+}
+
+@keyframes grass_night {
+  from{
+    background-color: rgba(0, 255, 100, 0.5);
+  }
+
+  to{
+    background-color: rgba(0, 50, 0, 0.9);
+  }
+}
+
+.thermometer{
+  margin-left: 10vh;
+  margin-top: 10vh;
+  background-color: lightgray;
+  height: 30vh;
+  width: 10vh;
+  box-shadow: -0.15vh -0.15vh 0.05px gray;
+}
+
+.mercury{
+  margin: auto;
+  margin-top: -2vh;
+  width: 0.5vh;
+  height: 30vh;
+  background-color: red;
+  transition: 2s;
+}
+
+.mercury:hover{
+  margin-top: -15vh;
+}
+
+.mark{
+  margin: 0.5vh 1vh;
+}
+
+.mark_part{
+  margin: 0.5vh 3vh;
+}
+
+.pause{
+	animation-play-state: paused;
+}

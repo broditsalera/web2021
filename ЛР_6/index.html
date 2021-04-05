@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Бродица ЛР6</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="sky">
+  <img src="images/fish.png" class="fish">
+  <div class="night">
+    <img src="images/fish.png" class="fish">
+  </div>
+</div>
+<div class="grass">
+  <div class="thermometer">
+    <p align="center">It's</p>
+    <p align="center">thermometer</p>
+    <p align="center">hover me</p>
+    <p align="center">↓</p>
+    <br>
+    <p class="mark">25 --</p>
+    <p class="mark_part">--</p>
+    <p class="mark">20 --</p>
+    <p class="mark_part">--</p>
+    <p class="mark">15 --</p>
+    <p class="mark_part">--</p>
+    <p class="mark">10 --</p>
+    <p class="mark_part">--</p>
+
+    <div class="mercury"></div>
+  </div>
+</div>
+<script>
+$("img").mouseenter(() => {
+	$("img").addClass("pause");
+});
+
+$("img").mouseleave(() => {
+	$("img").removeClass("pause");
+});
+</script>
+</body>
+</html>
