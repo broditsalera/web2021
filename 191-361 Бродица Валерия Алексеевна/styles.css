@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background-color: #B0E0E6;
+}
+
+header {
+	background-color: #B0E0E6;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.header_game_name {
+    display: flex;
+    justify-content: space-between;
+    background-color: #7B68EE;
+    height: 100px;
+    align-items: center;
+}
+
+p::selection{
+    background-color: darkcyan;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #4682B4;
+}
+
+.game_name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+.game_logo {
+    background-size: 30px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.about_author {
+    max-width:700px;
+    min-height: 100px;
+    background-color: #ADD8E6;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    color: white;
+}
+
+label {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+button {
+    background-color: #6495ED;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 100%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form a {
+    background-color: #6495ED;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 100%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about_header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.about_inf {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(40, 105, 102);
+}
+
+.about_game {
+    max-width:900px;
+    min-height: 200px;
+    background-color: #6495ED;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_game_header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.about_game_inf {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(40, 105, 102);
+}
+
+.gallery_content img {
+    width: 200px;
+}
+
+.about_header:hover{
+    font-size: 30px;
+    color: darkblue;
+    transition: 2.5s;
+}
+
+.about_game_header:hover{
+    font-size: 30px;
+    color: darkblue;
+    transition: 2.5s;
+}
+
+.gallery {
+    max-width:1000px;
+    min-height: 200px;
+    background-color: #ADD8E6;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@keyframes animation {
+    100% {
+        left: 100vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery_content {
+        flex-direction: column;
+    }
+}
