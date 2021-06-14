@@ -1,39 +1,83 @@
+.wrap {
+	flex-wrap: wrap;
+}
+
+.grow {
+	flex-grow: 5;
+}
+
+.basis {
+	flex-basis: 300px;
+}
+
+.shrink {
+	flex-shrink: 100px;
+}
+
+.order1 {
+	order: 1;
+}
+
+.order2 {
+	order: 2;
+}
+
+.order3 {
+	order: 3;
+}
+
+.item {
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	background-color: #FF69B4;
+	font-size: 30px;
+	border-radius: 50%;
+	display: flex;
+	margin: 2%;
+	color: white;
+}
+
+.item:hover {
+	background-color: darkblue;
+}
+
+.item p {
+	padding: 35px;
+}
+
+.second {
+	align-self: flex-end;
+}
+
+.direction {
+	flex-flow: row;
+}
+
+.justify {
+	justify-content: space-between;
+}
+
+.left {
+	align-items: center;
+}
+
+.reverse {
+	flex-direction: row-reverse;
+}
+
 * {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
-.container{
-  margin: 1%;
-  display: flex;
+h1 {
+	text-align: center;
 }
 
-.item{
-  width: 100px;
-  height: 100px;
-  margin: 2%;
-  color: white;
-  background-color: #FF00FF;
-  font-size: 30px;
-  text-align: center;
-}
-
-.item p{
-  padding: 35px;
-}
-
-.justify{
-  justify-content:space-around;
-}
-
-.center{
-  justify-content: center;
-}
-
-.direction{
-  flex-direction: column;
-}
-
-.reverse{
-  flex-direction: column-reverse;
+.container {
+	margin: 1%;
+	display: flex;
+	flex: 1;
 }
