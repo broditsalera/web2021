@@ -1,48 +1,82 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>Бродица ЛР7</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body text="#301807" bgcolor="#FFC0CB">
-    <body>
-      <h2>Grid</h2>
-      <div class="container">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-      </div>
-      <h2>Gap</h2>
-      <div class="container gap">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-      </div>
-      <h2>Грид представляет собой набор ячеек, которые образуются на пересечении столбцов и строк. Но сами строки и столбцы образуются с 
-	  помощью grid-линий, которые рассекают грид по вертикали и горизонтали.</h2>
-      <div class="container gap">
-        <div class="item item1"></div>
-        <div class="item item2"></div>
-        <div class="item item3"></div>
-        <div class="item"></div>
-      </div>
-      <h2>По умолчанию каждый элемент в гриде позиционируется в одну ячейку по порядку. Но мы можем более точно настроить расположение элемента 
-	  в гриде с помощью ряда свойств: grid-row-start, grid-row-end, grid-column-start, grid-column-end.</h2>
-      <div class="other_container">
-        <div class="other_item light">
-          <p>HotPink</p>
-        </div>
-        <div class="other_item">
-          <p>DeepPink</p>
-        </div>
-        <div class="other_item">
-          <p>PaleVioletRed</p>
-        </div>
-        <div class="other_item light">
-          <p>MediumVioletRed</p>
-        </div>
-    </div>
-  </body>
+<head>
+	<title>Бродица ЛР7</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<br>
+	<h1>Repeat, MinMax, Before, After</h1>
+	<br>
+	<div class="editRepeat">
+		<div class="item">1</div>
+		<div class="item">2</div>
+	</div>
+	<br>
+	<h1>Наложение Grid элементов</h1>
+	<br>
+	<div class="grid">
+		<div class="item-1"></div>
+		<div class="item-2"></div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1>Grid</h1>
+	<div class="container repeat">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+	<br>
+	<div class="container named">
+		<div class="item fourth">1</div>
+		<div class="item third">2</div>
+		<div class="item second">3</div>
+		<div class="item first">4</div>
+	</div>
+
+	<h1>Positioning</h1>
+	<div class="container gap">
+		<div class="item item1">1</div>
+		<div class="item item2">2</div>
+		<div class="item item3">3</div>
+		<div class="item">4</div>
+	</div>
+
+	<h1>Gap</h1>
+	<div class="container gap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+	</div>
+
+	<h1>Other properties</h1>
+	<div class="other_container">
+		<div class="other_item light">
+			<p>1</p>
+		</div>
+		<div class="other_item">
+			<p>2</p>
+		</div>
+		<div class="other_item">
+			<p>3</p>
+		</div>
+		<div class="other_item light">
+			<p>4</p>
+		</div>
+	</div>
+</body>
 </html>
