@@ -1,98 +1,123 @@
-*{
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
-.sky{
-  width: 100%;
-  height: 50vh;
-  background-color: rgba(0, 100, 255, 0.5);
+.sky {
+    background-color: blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
-.night{
-  width: 100%;
-  height: 50vh;
-  background-color: black;
-  transition: opacity;
-  animation: change_day 15s linear infinite alternate;
-  animation-direction: alternate;
+.night {
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: black;
+    transition: opacity;
+    animation: change_day 10s linear infinite;
+    animation-direction: alternate;
+    z-index: 0;
 }
 
-.fish{
-  max-width: 20vh;
-  max-height: 20vh;
-  width: 20%;
-  position: absolute;
-  animation: fish_swim 10s linear infinite;
+.fish {
+    max-width: 20vh;
+    max-height: 20vh;
+    width: 20%;
+    position: absolute;
+    animation: fish_swim 20s linear infinite;
 }
 
 @keyframes fish_swim {
-  from{
-    margin-left: 110%;
-  }
-  to{
-    margin-left: -20%;
-  }
+    0% {
+        margin-left: 110%;
+        top: 10%;
+    }
+    40% {
+        top: 70%;
+        margin-left: 50%;
+    }
+    60% {
+        top: 70%;
+        margin-left: 50%;
+    }
+    100% {
+        margin-left: -10%;
+        top: 10%;
+    }
 }
 
 @keyframes change_day {
-  from{
-    opacity: 0.0;
-  }
-  to {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.grass{
-  width: 100%;
-  height: 50vh;
-  margin-top: 50vh;
-  animation: grass_night 15s linear infinite alternate;
-
+.thermometer {
+    margin-left: 10vh;
+    margin-top: 10vh;
+    background-color: lightgray;
+    height: 30vh;
+    width: 10vh;
+    box-shadow: -0.15vh -0.15vh 0.05px gray;
 }
 
-@keyframes grass_night {
-  from{
-    background-color: rgba(0, 255, 100, 0.5);
-  }
-
-  to{
-    background-color: rgba(0, 50, 0, 0.9);
-  }
+.mercury {
+    margin: auto;
+    margin-top: -2vh;
+    width: 0.5vh;
+    height: 30vh;
+    background-color: red;
+    transition: 2s;
 }
 
-.thermometer{
-  margin-left: 10vh;
-  margin-top: 10vh;
-  background-color: lightgray;
-  height: 30vh;
-  width: 10vh;
-  box-shadow: -0.15vh -0.15vh 0.05px gray;
+.mercury:hover {
+    margin-top: -15vh;
 }
 
-.mercury{
-  margin: auto;
-  margin-top: -2vh;
-  width: 0.5vh;
-  height: 30vh;
-  background-color: red;
-  transition: 2s;
+.mark {
+    margin: 0.5vh 1vh;
 }
 
-.mercury:hover{
-  margin-top: -15vh;
+.mark_part {
+    margin: 0.5vh 3vh;
 }
 
-.mark{
-  margin: 0.5vh 1vh;
+.pause {
+    animation-play-state: paused;
 }
 
-.mark_part{
-  margin: 0.5vh 3vh;
+.bubbles {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bubbles.png");
+    animation: bubbles 20s linear infinite;
 }
 
-.pause{
-	animation-play-state: paused;
+@keyframes bubbles {
+    100% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+    0% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
 }
