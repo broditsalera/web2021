@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 100%;
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  background: linear-gradient(to right, #26232C 0%,#26232C 40%,#26232C 100%);
+}
