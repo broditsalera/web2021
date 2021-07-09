@@ -9,11 +9,39 @@ html {
 }
 
 body {
+  background-color: #ffffff;
+  text-color: #000000;
   margin: 0 auto;
   font-size: 100%;
   font-family: 'Roboto Slab', serif;
   color: #fff;
   background: linear-gradient(to right, #26232C 0%,#26232C 40%,#26232C 100%);
+}
+
+.main-content {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    color: var(--text-color);
+} 
+
+:root {
+    --dark-background-color: #111111;
+    --dark-text-color: #eeeeee;
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(dark-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --text-color: var(--dark-text-color);
+    }
 }
 
 ::-webkit-input-placeholder {
