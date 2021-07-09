@@ -71,6 +71,26 @@ a {
   background: #8cbdc5;
 }
 
+#js-insert {
+  top: 0;
+  left: 50px;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  border: none;
+  outline: none;
+  font-size: 23px;
+  font-family: inherit;
+  color:black;
+  background: #8cbdc5;
+}
+
+#js-toggle-all {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 .bar {
   color: #6C6777;
   background: #eee;
@@ -165,4 +185,161 @@ a {
 
 .list li:hover .destroy {
   display: inline-block;
+}
+
+.todo span {
+  display: block;
+  margin-left: 30px;
+  font-size: 23px;
+  transition: color 0.3s ease-out;
+}
+
+.completed .todo span {
+  text-decoration: line-through;
+  color:#a19a9ae0;
+}
+
+.toggle {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.toggle:after {
+  content: "";
+  position: absolute;
+  transform: rotateZ(-42deg);
+  animation: checkOut .0s ease-out forwards;
+}
+
+.toggle:checked:after {
+  animation: checkIn .3s ease-out forwards;
+}
+
+@keyframes checkIn {
+  0% {
+    width: 24px;
+    height: 24px;
+    background: #3D3747;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px #2B2831;
+  }
+  100% {
+    height: 14px;
+    width: 20px;
+    background: transparent;
+    border-radius: 0;
+    border-left: solid 4px #7ED180;
+    border-bottom: solid 4px #7ED180;
+  }
+}
+
+@keyframes checkOut {
+  0% {
+    height: 14px;
+    width: 20px;
+    background: transparent;
+    border-radius: 0;
+    border-left: solid 4px #7ED180;
+    border-bottom: solid 4px #7ED180;
+  }
+  100% {
+    width: 24px;
+    height: 24px;
+    background: #3D3747;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px #2B2831;
+  }
+}
+
+.edit {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 50px;
+  width: 0%;
+  height: 50px;
+  opacity: 0;
+  margin: auto 0;
+  font-size: 23px;
+  font-family: inherit;
+  color: #fff;
+  background: #7ED180;
+  margin-bottom: 11px;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.1);
+  z-index: 9;
+}
+
+.editing .edit {
+  animation: anime .3s ease-out forwards;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.destroy {
+  position: absolute;
+  display: block;
+  top: 0px;
+  right: 0;
+  border: none;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  z-index: 2;
+  outline: none;
+}
+
+.destroy:before,
+.destroy:after {
+  content: '';
+  position: absolute;
+  top: 12.5px;
+  left: 24px;
+  width: 1px;
+  height: 25px;
+  background: #EE1630;
+  opacity: 0;
+  box-shadow: 0 0 4px #24203D;
+  transition: all .5s ease-out;
+  transform: rotateZ(45deg);
+}
+
+.destroy:after {
+  left: 25px;
+  transform: rotateZ(-45deg);
+}
+
+.list li:hover .destroy:before,
+.list li:hover .destroy:after  {
+  opacity: 1;
+  height: 25px;
+}
+
+.destroy:hover:before,
+.destroy:hover:after {
+  box-shadow: 0 0px 8px #ee0000;
+}
+
+
+.editing .edit {
+  display: block;
+}
+
+.editing .todo {
+  visibility: hidden;
 }
