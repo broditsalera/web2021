@@ -343,3 +343,10 @@ a {
 .editing .todo {
   visibility: hidden;
 }
+
+.container {
+   background: #fff;
+   margin: auto;
+   height: 5px;
+   width: 1260px;
+}
